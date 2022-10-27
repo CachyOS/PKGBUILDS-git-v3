@@ -1,0 +1,34 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index 7714c81..ebc8891 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -35,9 +35,9 @@ if [ "$_mesa_branch" = "main" ]; then
+   _dri_drivers=""
+ fi
+ 
+-pkgname=('mesa-tkg-git')
++pkgname=('mesa-git')
+ if [ "$_lib32" == "true" ]; then
+-  pkgname+=('lib32-mesa-tkg-git')
++  pkgname+=('lib32-mesa-git')
+ fi
+ 
+ # custom mesa commit to pass to git
+@@ -529,7 +529,7 @@ build () {
+     fi
+ }
+ 
+-package_mesa-tkg-git() {
++package_mesa-git() {
+   depends=('libdrm' 'wayland' 'libxxf86vm' 'libxdamage' 'libxshmfence' 'libelf'
+            'libomxil-bellagio' 'libunwind' 'lm_sensors' 'libglvnd'
+            'expat' 'libclc' 'libx11' $_llvm)
+@@ -557,7 +557,7 @@ package_mesa-tkg-git() {
+   install -Dt "$pkgdir"/usr/share/licenses/$pkgname "$srcdir"/LICENSE
+ }
+ 
+-package_lib32-mesa-tkg-git() {
++package_lib32-mesa-git() {
+   depends=('lib32-libdrm' 'lib32-libxxf86vm' 'lib32-libxdamage' 'lib32-libxshmfence'
+            'lib32-lm_sensors' 'lib32-libelf' 'lib32-wayland'
+            'lib32-libglvnd' 'lib32-libx11' 'mesa' $_lib32_llvm)

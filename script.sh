@@ -2,6 +2,10 @@
 
 rm -rf *-git
 git clone https://github.com/Frogging-Family/mesa-git.git mesa-tkg-git
+git clone https://github.com/Frogging-Family/mesa-git.git
+cd mesa-git
+patch -Np1 < ../mesa-git.patch
+cd ..
 paru -G \
 contour-git \
 cutefish-git \
@@ -19,7 +23,7 @@ mold-git \
 hyprland-git \
 mesa-git \
 lib32-mesa-git \
-
+git-git
 
 files=$(find . -name "PKGBUILD")
 
