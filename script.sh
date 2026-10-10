@@ -10,15 +10,12 @@ paru -G \
 contour-git \
 cutefish-git \
 disman-git \
-exa-git \
 fastfetch-git \
-fbneo-git \
 ffmpeg-git \
 kwinft-git \
 lapce-git \
 gamescope-git \
 xorg-xwayland-git \
-spectrwm-git \
 mold-git \
 hyprland-git \
 mesa-git \
